@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>osyka</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+	<style>
+		body {
+			background-color: #c6273b;
+			overflow: hidden;
+		}
+		.img{
+			width: 500px;
+
+		}
+		.cont{
+			width: 100%;
+			height: 550px;
+		}
+		.contone{
+			width: 100%;
+			height: 150px;
+			display: flex;
+			justify-content: space-between;
+		}
+		.conttwo{
+			width: 100%;
+			height: 400px;
+			display: flex;
+			justify-content: space-around;
+		}
+		.lotusone {
+			transform: rotate(130deg);
+			left: -130px;
+
+		}
+		.lotustwo {
+			transform: rotate(-130deg);
+			left: 130px;
+		}
+		.lotus {
+			width: 500px;
+			position: relative;
+			top: -130px;
+			opacity: 75%;
+		}
+		.videocont {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 600px;
+			height: 380px;
+			position: relative;
+			top: 20px;
+		}
+		.rose {
+			width: 300px;
+			position: relative;
+			top: 150px;
+		}
+		.roseone {
+			animation: animboxy 2s infinite alternate;
+		}
+		.rosetwo {
+			animation: animboxx 2s infinite alternate;
+		}
+		.h1 {
+			color: white;
+			font-size: 70px;
+			position: absolute;
+			font-family: 'Pacifico', cursive;
+			font-weight: lighter;
+			top:-20px;
+		}
+		.conth1 {
+			display: flex;
+			justify-content: center;
+		}
+		.frame {
+			position: absolute;
+			width: 650px;
+			height: 380px;
+		}
+		@keyframes animboxy {
+		from { transform: rotate(0); }
+		to {transform: rotate(360deg); }
+		}
+		@keyframes animboxx {
+		from { transform: rotate(0); }
+		to {transform: rotate(-360deg); }
+		}
+	</style>
+</head>
+	<body>
+		<div class="cont">
+			<div class="contone">
+				<div class="img">
+					<img class="lotus lotusone" src="lotus.svg">
+				</div>
+				<div class="conth1"><h1 class="h1">Зі святом весни!</h1></div>
+				<div class="img">
+					<img class="lotus lotustwo" src="lotus.svg">
+				</div>
+			</div>
+				<div class="conttwo">
+					<div class="block">
+						<img class="rose roseone" src="rose.svg">
+					</div>
+
+					<div class="block videocont">
+						<img class="frame" src="frame.png">
+						<video controls width="500" poster="image.png"><source src="video.mp4" type="video/mp4">
+						<track kind="subtitles" src="стих.txt" srclang="uk">
+						</video>
+					</div>
+
+					<div class="block">
+						<img class="rose rosetwo" src="rose.svg">
+					</div>
+		</div>
+		</div>
+	</body>
+</html>
