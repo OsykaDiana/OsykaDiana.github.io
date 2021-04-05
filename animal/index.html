@@ -1,0 +1,154 @@
+<!DOCTYPE html> 
+<html lang="ru">
+<html><head>
+  <meta charset="UTF-8" />
+  <title>Osyka Diana</title>
+    </head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <style>
+    	* {
+    		font-family: 'Balsamiq Sans', cursive;
+    	}
+    	body 
+    	{	zoom: 140%;
+    		background-color: lightgreen;
+    		display: flex;
+    		justify-content: space-around;
+    		align-items: center;
+    		background-image: url('curl.svg');
+    		background-size: 30px 30px;
+
+
+    	}
+    	.cont1 {
+    		background-color: green;
+    		border: 2px solid darkgreen;
+    		border-radius: 20px;
+    		width: 400px;
+    		height: 400px;
+    		align-self: center;
+    		margin: auto;
+    		display: flex;
+    		align-items: center;
+    		justify-content: center;
+    		flex-direction: column;
+    		margin-left: 5%;
+    	}
+	.h {
+		color: white;
+		text-align: center;
+	}
+	#layerdown {
+		width:200px;
+		height:200px;
+		background-color: green;
+		position: absolute;
+		top: 113px;
+		margin: 20px;
+
+	}
+	#layerup {
+		width:200px;
+		height:200px;
+		background-image: url('https://cdn.pixabay.com/photo/2012/04/24/21/13/question-mark-40876_960_720.png');
+		background-size: 140px 180px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-clip: border-box;
+		background-color: lightgreen;
+		margin: 20px;
+		z-index: 1;
+	}
+	#go {
+		background: lightgreen;
+		width: 70px;
+		height: 35px;
+    	font-size: 14pt;
+    	border-radius: 10px;
+    	border: 2px solid;
+    	box-shadow: 0px 0px 20px #b5ff1b;
+	}
+	.cont2 {
+		width: 40%;
+		height: auto;
+		margin: 5%;
+		background-color: lightblue;
+		border-radius: 20px;
+		border: 2px solid darkgreen;
+	}
+	#zag{
+		text-align: center;
+	}
+	#p{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+    </style>
+    <body>
+      <div class="cont1">
+      	<h1 class="h">Узнай кто ты!</h1>
+      	<div id="layerdown"></div>
+      	<div id="layerup"></div>
+      	<input type="button" name="go" value="&#10084;" id="go" onclick="go()">
+      </div>
+      <div class="cont2">
+      	<h3 class="h">Кто? Кто?</h3>
+      	<h2 id="zag"></h2>
+      		<p id="p"></p>
+      </div>
+    <script>
+    	function go(){
+
+    		document.getElementById("go").style.backgroundColor = "gray";
+    		document.getElementById('go').disabled = true;
+
+			var zagol = "";
+			var page = "";
+			var nam = Math.random();
+    		let imgi = document.createElement("img");
+    		imgi.width = "200";
+    		imgi.height = "200";
+    		
+    		if (nam>=0 && nam<0.2) 
+	    		{
+	   			imgi.src = "drak.jpg";
+	   			zagol = "Дракоша";
+	   			page = "Ты - крепкий и грозный боец, разящий пламенем все вокруг. Всегда настроен решительно, но никогда не обидишь своих друзей.<br>Щедрость - это твое второе имя после неизмеримой доброты!"
+				}
+
+			else if (nam>=0.2 && nam<0.4) 
+	    		{
+	   			imgi.src = "volk.jpg";
+	   			zagol = "Волченок";
+	   			page = "Ты - мужественный и храбрый воин, твоя территория всегда под защитой и строгим надзором, но только не тогда, когда твое пузико хотят почесать. <br> Пушистая, теплая шерстка придает тебе особого шарма."
+				}
+
+			else if (nam>=0.4 && nam<0.6) 
+	    		{
+	   			imgi.src = "crol.jpg";
+	   			zagol = "Крольченок";
+	   			page = "Ты обладаешь особой привлекательностью, каждый хотел бы погладить твою нежную шерстку, но ты не даешь им себя взять!<br>Сколько на тебя не смотри, всегда даришь людям хорошее настроение и улыбку."
+				}
+
+			else if (nam>=0.6 && nam<0.8) 
+    		{
+	   			imgi.src = "cot.jpg";
+	   			zagol = "Котик";
+	   			page = "Ты - маленькое нежное создание. С тобой всегда приятно потискаться, что заставляет чувствовать себя лучше.<br>Ты являешься хорошим другом: умеешь выслушать и поддержать своим молчанием."
+			}
+
+			else {
+	   			imgi.src = "sova.jpg";
+	   			zagol = "Совушка";
+	   			page = "Ты обладаешь черезвычайной мудростью, остроте твоего ума можно только позавидовать. Держаться предпочитешь в одиночестве, но иногда круто веселишься с друзьями.<br>"
+			}
+
+			layerup.append(imgi);
+			zag.innerHTML = zagol;
+			p.innerHTML = page;
+    		
+}
+    </script>
+    </body>
+</html>
