@@ -13,11 +13,7 @@ function gosqrt() {
 	var a =  Number(document.getElementById('a').value);
 	var b =  Number(document.getElementById('b').value);
 	var c =  Number(document.getElementById('c').value);
-	console.log(a);
-	console.log(b);
-	console.log(c);
 	var d = b**2 - 4*a*c;
-	console.log(d);
 	if (d < 0) {rez.innerHTML = "Рівняння не має коренів"}
 
 	else if (d == 0) {
@@ -32,8 +28,6 @@ function gosqrt() {
 				x1 = Math.round((-b+d**0.5)/(2*a)*100)/100;
 				x2 = Math.round((-b-d**0.5)/(2*a)*100)/100;
 				rez.innerHTML = x1 +';' + x2+ ";";
-				console.log(x1);
-				console.log(x2);
 			if (x1 == Infinity || x1 == -Infinity ||x2 == Infinity || x2 == -Infinity  ) {
 				rez.innerHTML =  "Безліч розв'язків"
 			}
