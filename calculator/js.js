@@ -3,7 +3,6 @@ function golin() {
 	var a =  Number(document.getElementById('a').value);
 	var b =  Number(document.getElementById('b').value);
 	x=(-b)/a;
-	console.log(x)
 	if (a == 0) {x = "Рівняння не має коренів"}
 	rez.innerHTML = x;
 }
