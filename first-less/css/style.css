@@ -73,6 +73,12 @@ section{
     width: 227px;
     color: white;
     text-decoration: none;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    color: #FF6861
+    background-color: white;
 }
 
 .first-left {
